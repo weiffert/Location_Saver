@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 import Home from "./Pages/Home"
 import Viewer from "./Pages/Viewer"
@@ -18,22 +18,20 @@ export default class App extends React.Component {
         <Home />
         <Viewer />
         <Saver />
-        {/*
         <View>
           <Button
-            onPress={this.setState({ page: "Viewer" })}
+            //onPress={this.setState({ page: "Viewer" })}
             title="View Locations"
             disabled={true}
           />
           <Button
-            onPress={this.setState({ page: "Saver" })}
+            //onPress={this.setState({ page: "Saver" })}
             title="Save Location"
           />
         </View>
         <View style={styles.container}>
           <Text>Open up App.js to start working on your app!</Text>
         </View>
-        */}
       </View>
     );
   }
