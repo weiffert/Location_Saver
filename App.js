@@ -6,6 +6,7 @@ import {
   createBottomTabNavigator,
 } from "react-navigation";
 
+import Status from "./Pages/Status";
 import ViewerScreen from "./Pages/ViewerScreen";
 import SaverScreen from "./Pages/SaverScreen";
 import ProfileScreen from "./Pages/ProfileScreen";
@@ -27,7 +28,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <Text>StAYYYYYY</Text>
+        <Status></Status>
         <TabContainer />
       </View>
     );
