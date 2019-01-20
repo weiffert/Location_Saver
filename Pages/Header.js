@@ -11,16 +11,18 @@ export default class Header extends React.Component {
     }
   }
   toggleProfile() {
-    this.setState({profile: !this.state.profile});
+    this.setState({ profile: !this.state.profile });
   }
 
 
   render() {
     return (
-      <View style={{alignItems: "flex-end", backgroundColor: "blue" }}>
-        <Button style={{backgroundColor: "green", width: 70, height: 70, borderRadius: 100}}
-          onPress={() => this.toggleProfile()} title="Press Me">
-        </Button>
+      <View>
+        <View style={{ alignItems: "flex-end", backgroundColor: "blue" }}>
+          <Button style={{ backgroundColor: "green", width: 70, height: 70, borderRadius: 100 }}
+            onPress={() => this.toggleProfile()} title="Press Me">
+          </Button>
+        </View>
         <ProfileScreen show={this.state.profile} />
       </View>
     )
