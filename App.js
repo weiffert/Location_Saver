@@ -3,17 +3,17 @@ import { Button, StyleSheet, Text, View } from "react-native";
 
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
-import Home from "./Pages/Home";
-import Profile from "./Pages/Profile";
-import Viewer from "./Pages/Viewer";
-import Saver from "./Pages/Saver";
+import Home from "./Pages/HomeScreen";
+import Profile from "./Pages/ProfileScreen";
+import Viewer from "./Pages/ViewerScreen";
+import Saver from "./Pages/SaverScreen";
 
 const Navigator = createStackNavigator(
   {
-    Home: { screen: Home,},
-    Profile: { screen: Profile,},
-    Viewer: { screen: Viewer,},
-    Saver: { screen: Saver,},
+    Profile: { screen: ProfileScreen, },
+    Viewer: { screen: ViewerScreen, },
+    Saver: { screen: SaverScreen, },
+    Location: { screen: LocationDetails, },
   },
   {
     initialRouteName: "Home",
