@@ -10,7 +10,6 @@ import Status from "./Pages/Status";
 import Header from "./Pages/Header";
 import ViewerScreen from "./Pages/ViewerScreen";
 import SaverScreen from "./Pages/SaverScreen";
-import ProfileScreen from "./Pages/ProfileScreen";
 import LocationDetails from "./Pages/LocationScreen";
 
 const TabNavigator = createBottomTabNavigator(

@@ -1,11 +1,27 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Button, Text, Image } from "react-native";
+
+import ProfileScreen from "./ProfileScreen";
 
 export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      profile: false,
+    }
+  }
+  toggleProfile() {
+    this.setState({profile: !this.state.profile});
+  }
+
+
   render() {
     return (
       <View style={{alignItems: "flex-end", backgroundColor: "blue" }}>
-        <View style={{backgroundColor: "green", width: 70, height: 70, borderRadius: 100}}></View>
+        <Button style={{backgroundColor: "green", width: 70, height: 70, borderRadius: 100}}
+          onPress={() => this.toggleProfile()} title="Press Me">
+        </Button>
+        <ProfileScreen show={this.state.profile} />
       </View>
     )
   }
