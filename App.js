@@ -13,7 +13,7 @@ const TabNavigator = createBottomTabNavigator(
     Saver: { screen: SaverScreen, },
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "Viewer",
   }
 );
 
