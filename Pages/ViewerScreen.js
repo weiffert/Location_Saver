@@ -4,10 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 export default class ViewerScreen extends React.Component {
   render() {
     return (
-      <View>
-        <View style={styles.container}>
-          <Text>Viewer</Text>
-        </View>
+      <View style={styles.container}>
+        <Text>Viewer</Text>
       </View>
     );
   }
@@ -16,7 +14,7 @@ export default class ViewerScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "red",
     alignItems: "center",
     justifyContent: "center",
   },
