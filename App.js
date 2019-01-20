@@ -1,25 +1,23 @@
 import React from "react";
 
-import { createStackNavigator, createAppContainer,  } from "react-navigation";
+import { createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
 
-import ProfileScreen from "./Pages/ProfileScreen";
 import ViewerScreen from "./Pages/ViewerScreen";
 import SaverScreen from "./Pages/SaverScreen";
+import ProfileScreen from "./Pages/ProfileScreen";
 import LocationDetails from "./Pages/LocationScreen";
 
-const StackNavigator = createStackNavigator(
+const TabNavigator = createBottomTabNavigator(
   {
-    Profile: { screen: ProfileScreen, },
     Viewer: { screen: ViewerScreen, },
     Saver: { screen: SaverScreen, },
-    Location: { screen: LocationDetails, },
   },
   {
     initialRouteName: "Home",
   }
 );
 
-const AppContainer = createAppContainer(StackNavigator);
+const AppContainer = createContainer(TabNavigator);
 
 export default class App extends React.Component {
   render() {
