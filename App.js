@@ -1,14 +1,13 @@
 import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
 
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator, createAppContainer,  } from "react-navigation";
 
-import Home from "./Pages/HomeScreen";
-import Profile from "./Pages/ProfileScreen";
-import Viewer from "./Pages/ViewerScreen";
-import Saver from "./Pages/SaverScreen";
+import ProfileScreen from "./Pages/ProfileScreen";
+import ViewerScreen from "./Pages/ViewerScreen";
+import SaverScreen from "./Pages/SaverScreen";
+import LocationDetails from "./Pages/LocationScreen";
 
-const Navigator = createStackNavigator(
+const StackNavigator = createStackNavigator(
   {
     Profile: { screen: ProfileScreen, },
     Viewer: { screen: ViewerScreen, },
@@ -20,7 +19,7 @@ const Navigator = createStackNavigator(
   }
 );
 
-const AppContainer = createAppContainer(Navigator);
+const AppContainer = createAppContainer(StackNavigator);
 
 export default class App extends React.Component {
   render() {
