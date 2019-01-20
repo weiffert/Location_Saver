@@ -7,6 +7,7 @@ import {
 } from "react-navigation";
 
 import Status from "./Pages/Status";
+import Header from "./Pages/Header";
 import ViewerScreen from "./Pages/ViewerScreen";
 import SaverScreen from "./Pages/SaverScreen";
 import ProfileScreen from "./Pages/ProfileScreen";
@@ -27,8 +28,9 @@ const TabContainer = createAppContainer(TabNavigator);
 export default class App extends React.Component {
   render() {
     return (
-      <View style={{flex: 1}}>
-        <Status></Status>
+      <View style={{ flex: 1 }}>
+        <Status />
+        <Header />
         <TabContainer />
       </View>
     );
