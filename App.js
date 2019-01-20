@@ -1,47 +1,29 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
-import Home from "./Pages/Home"
-import Viewer from "./Pages/Viewer"
-import Saver from "./Pages/Saver"
+import { createStackNavigator, createAppContainer } from "react-navigation";
+
+import Home from "./Pages/Home";
+import Profile from "./Pages/Profile";
+import Viewer from "./Pages/Viewer";
+import Saver from "./Pages/Saver";
+
+const Navigator = createStackNavigator(
+  {
+    Home: { screen: Home,},
+    Profile: { screen: Profile,},
+    Viewer: { screen: Viewer,},
+    Saver: { screen: Saver,},
+  },
+  {
+    initialRouteName: "Home",
+  }
+);
+
+const AppContainer = createAppContainer(Navigator);
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      page: "Home",
-    };
-  }
   render() {
-    return (
-      <View>
-        <Home />
-        <Viewer />
-        <Saver />
-        <View>
-          <Button
-            //onPress={this.setState({ page: "Viewer" })}
-            title="View Locations"
-            disabled={true}
-          />
-          <Button
-            //onPress={this.setState({ page: "Saver" })}
-            title="Save Location"
-          />
-        </View>
-        <View style={styles.container}>
-          <Text>Open up App.js to start working on your app!</Text>
-        </View>
-      </View>
-    );
+    return <AppContainer />;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

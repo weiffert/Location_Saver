@@ -3,13 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 
 import ButtonList from "./Components/ButtonList";
 
-export default class Home extends React.Component {
+export default class Profile extends React.Component {
   render() {
     return (
       <View>
         <ButtonList navigation={this.props.navigation}/>
         <View style={styles.container}>
-          <Text>Open up App.js to start working on your app!</Text>
+          <Text>Profile</Text>
         </View>
       </View>
     );
