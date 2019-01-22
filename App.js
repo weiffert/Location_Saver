@@ -8,14 +8,9 @@ import {
   createBottomTabNavigator,
 } from "react-navigation";
 
-import Status from "./src/Status";
-import Header from "./src/Header";
-import ViewerScreen from "./src/ViewerScreen";
 import HomeScreen from "./src/HomeScreen"
 import ProfileScreen from "./src/ProfileScreen"
 import SettingsScreen from "./src/SettingsScreen"
-import SaverScreen from "./src/SaverScreen";
-import LocationDetails from "./src/LocationScreen";
 
 const AuthNav = createSwitchNavigator(
   {
