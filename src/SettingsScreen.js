@@ -2,9 +2,9 @@ import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 
 import Header from "./Header"
-export default class ProfileScreen extends React.Component {
+export default class SettingsScreen extends React.Component {
   static navigationOptions = {
-    drawerLabel: 'Profile',
+    drawerLabel: 'Settings',
   };
 
   render() {
@@ -14,7 +14,8 @@ export default class ProfileScreen extends React.Component {
         <Button
           onPress={() => this.props.navigation.goBack()}
           title="Go back home"
-        /></View>
+        />
+      </View>
     );
   }
 }

@@ -3,34 +3,57 @@ import { View, Text } from "react-native";
 import {
   createStackNavigator,
   createAppContainer,
+  createDrawerNavigator,
+  createSwitchNavigator,
   createBottomTabNavigator,
 } from "react-navigation";
 
-import Status from "./Pages/Status";
-import Header from "./Pages/Header";
-import ViewerScreen from "./Pages/ViewerScreen";
-import SaverScreen from "./Pages/SaverScreen";
-import LocationDetails from "./Pages/LocationScreen";
+import Status from "./src/Status";
+import Header from "./src/Header";
+import ViewerScreen from "./src/ViewerScreen";
+import HomeScreen from "./src/HomeScreen"
+import ProfileScreen from "./src/ProfileScreen"
+import SettingsScreen from "./src/SettingsScreen"
+import SaverScreen from "./src/SaverScreen";
+import LocationDetails from "./src/LocationScreen";
 
-const TabNavigator = createBottomTabNavigator(
+const AuthNav = createSwitchNavigator(
   {
-    Viewer: { screen: ViewerScreen },
-    Saver: { screen: SaverScreen },
-  },
-  {
-    initialRouteName: "Viewer",
+    Home: {
+      screen: HomeScreen 
+    },
+    Profile: {
+      screen: ProfileScreen
+    },
+    /*Settings: {
+      screen: SettingsScreen
+    }*/
   }
 );
 
-const TabContainer = createAppContainer(TabNavigator);
+const DrawerNav = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreen 
+    },
+    Profile: {
+      screen: ProfileScreen
+    },
+    Settings: {
+      screen: SettingsScreen
+    }
+  }
+);
+
+const DrawerContainer = createAppContainer(DrawerNav);
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Status />
-        <Header />
-        <TabContainer />
+        {//<Status />
+        }
+        <DrawerContainer/>
       </View>
     );
   }
