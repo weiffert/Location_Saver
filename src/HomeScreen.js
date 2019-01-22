@@ -12,7 +12,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View>
-        <Header navigation={this.props.navigation} />
+        <Header navigation={this.props.navigation} title="Home" />
 
         <Button
           onPress={() => this.props.navigation.navigate('Profile')}

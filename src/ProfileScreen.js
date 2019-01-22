@@ -10,7 +10,7 @@ export default class ProfileScreen extends React.Component {
   render() {
     return (
       <View>
-        <Header navigation={this.props.navigation}></Header>
+        <Header navigation={this.props.navigation} title="Profile"></Header>
         <Button
           onPress={() => this.props.navigation.goBack()}
           title="Go back home"

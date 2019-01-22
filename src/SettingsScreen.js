@@ -11,7 +11,7 @@ export default class SettingsScreen extends React.Component {
   render() {
     return (
       <View>
-        <Header navigation={this.props.navigation}></Header>
+        <Header navigation={this.props.navigation} title="Settings"></Header>
         <Button
           onPress={() => this.props.navigation.goBack()}
           title="Go back home"
