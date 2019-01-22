@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import {Button } from "react-native-elements"
+import { StyleSheet, Text, View } from "react-native";
 
 import Header from "./Header"
 export default class SettingsScreen extends React.Component {
