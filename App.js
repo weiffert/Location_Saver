@@ -43,11 +43,14 @@ const DrawerNav = createDrawerNavigator(
 const DrawerContainer = createAppContainer(DrawerNav);
 
 export default class App extends React.Component {
+  saveLocation = () => {
+    console.log("Location Saved!");
+  }
+  // TODO: HOW TO PASS THIS DOWN TO ONLY HOME THROUGH THE DRAWER?
+
   render() {
     return (
       <View style={{ flex: 1 }}>
-        {//<Status />
-        }
         <DrawerContainer/>
       </View>
     );
