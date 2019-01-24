@@ -5,3 +5,9 @@ An app that saves your location. Saves locations on a button push to a firebase 
 Languages: JS
 
 Libraries: React Native, React Navigation
+
+Setup:
+1. Install Node
+2. Add dependencies from the project: `npm install`
+3. Install Expo for developing on other projects as well: `npm install -g expo-cli`
+4. To run the project: `npm start`
